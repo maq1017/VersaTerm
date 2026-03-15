@@ -204,8 +204,14 @@ static INFLASHFUN bool vd_render_row_to(int src, int dst)
       bool    hold_before    = s.hold_graphics;
 
       switch (ctrl) {
-        case 0x40: case 0x41: case 0x42: case 0x43: case 0x44:
-        case 0x45: case 0x46: case 0x47:              // Alpha colours incl. Black (SET AFTER)
+        case 0x40:                                    // Alpha Black: enter alpha mode, keep fg
+          s.graphics        = false;
+          s.conceal         = false;
+          s.held_slot       = 0x00;
+          s.held_slot_valid = false;
+          break;
+        case 0x41: case 0x42: case 0x43: case 0x44:
+        case 0x45: case 0x46: case 0x47:              // Alpha colours (SET AFTER)
           s.fg              = vd_colour_table[ctrl - 0x40u];
           s.graphics        = false;
           s.conceal         = false;
@@ -240,7 +246,7 @@ static INFLASHFUN bool vd_render_row_to(int src, int dst)
         case 0x59: s.separated     = false; break;    // Contiguous Gfx (SET AFTER)
         case 0x5A: s.separated     = true;  break;    // Separated Gfx  (SET AFTER)
         case 0x5C: s.bg            = VD_BLACK; break; // Black Background (SET AT)
-        case 0x5D: s.bg            = s.fg;    break;  // New Background   (SET AFTER)
+        case 0x5D: s.bg            = s.fg;    break;  // New Background   (SET AT)
         case 0x5E: s.hold_graphics = true;  break;    // Hold Graphics    (SET AT)
         case 0x5F: s.hold_graphics = false; break;    // Release Graphics (SET AFTER)
         default: break;
@@ -260,9 +266,9 @@ static INFLASHFUN bool vd_render_row_to(int src, int dst)
       }
       if (flash_before) attr |= ATTR_BLINK;
 
-      // Colour: 0x5C (Black Bg) is SET AT so use updated s.bg; everything else uses
-      // pre-update fg/bg.  Conceal uses pre-update state for the control cell.
-      cell_bg = (ctrl == 0x5C) ? s.bg : bg_before;
+      // Colour: 0x5C (Black Bg) and 0x5D (New Bg) are SET AT so use updated s.bg;
+      // everything else uses pre-update fg/bg.
+      cell_bg = (ctrl == 0x5C || ctrl == 0x5D) ? s.bg : bg_before;
       cell_fg = conceal_before ? bg_before : fg_before;
 
     } else {
@@ -309,12 +315,10 @@ static INFLASHFUN bool vd_render_row_to(int src, int dst)
 static INFLASHFUN void vd_render_row(int row)
 {
   // Determine whether this row is the lower row of a double-height pair.
-  bool is_lower_dbl = false;
-  if (row > 0) {
-    for (int c = 0; c < VD_COLS; c++) {
-      if (vd_ctrl[row-1][c] == 0x4D) { is_lower_dbl = true; break; }
-    }
-  }
+  // Use the already-rendered row attribute of the previous row rather than
+  // scanning raw ctrl codes - this prevents cascading when the data also has
+  // a double-height code on the bottom-half row itself.
+  bool is_lower_dbl = (row > 0) && (framebuf_get_row_attr(row-1) == ROW_ATTR_DBL_HEIGHT_TOP);
 
   if (is_lower_dbl) {
     // Lower row of a double-height pair: re-render the row above's source data

@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/maquis/code/VersaTerm/software/build/elf2uf2/cmake_install.cmake",
+		"/Users/maquis/code/VersaTerm/software/build/elf2uf2/boot_uf2_headers/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,181 @@
+#!/usr/bin/env python3
+"""
+Generate VersaTerm font_viewdata_mosaic.h
+
+Produces 256-character font, 8 pixels wide × 20 scanlines tall.
+Stored in BMP format (bottom-to-top) matching VersaTerm's set_font_data().
+
+16-px-native split layout:
+  0x00-0x3F : LEFT  half of contiguous mosaic patterns 0..63
+  0x40-0x7F : LEFT  half of separated  mosaic patterns 0..63
+  0x80-0xBF : RIGHT half of contiguous mosaic patterns 0..63
+  0xC0-0xFF : RIGHT half of separated  mosaic patterns 0..63
+
+Mosaic pattern bits (6-bit value, per Prestel/Viewdata SAA5050 spec):
+  bit 0 → top-left   block
+  bit 1 → top-right  block
+  bit 2 → mid-left   block
+  bit 3 → mid-right  block
+  bit 4 → bot-left   block
+  bit 5 → bot-right  block
+
+The 16-px cell is split at the midpoint (8 px per half):
+  LEFT  byte : left  column of mosaic (bits 0,2,4 = TL,ML,BL)
+  RIGHT byte : right column of mosaic (bits 1,3,5 = TR,MR,BR)
+
+Row heights (total 20 scanlines):
+  Top    row : scanlines  0.. 6  (7 px)
+  Middle row : scanlines  7..13  (7 px)
+  Bottom row : scanlines 14..19  (6 px)
+
+Contiguous mode: full 8 px per half-column.
+Separated mode : 1-px gap on each edge of each 8-px half → inner 6 px active.
+"""
+
+import os
+
+OUT_FILE = os.path.join(os.path.dirname(__file__), '../src/font_viewdata_mosaic.h')
+
+CHAR_HEIGHT   = 20
+NUM_CHARS     = 256
+CHARS_PER_ROW = 32
+
+# Row spans for the 3 vertical blocks
+ROW_SPANS = [
+    (0,  7),   # top    block: rows 0..6
+    (7,  14),  # middle block: rows 7..13
+    (14, 20),  # bottom block: rows 14..19
+]
+
+# Stored pixel fill for each 8-px half-column
+LEFT_CONT  = 0xFF   # all 8 px (contiguous)
+LEFT_SEP   = 0x7E   # inner 6 px, 1-px gap on each side (separated)
+RIGHT_CONT = 0xFF
+RIGHT_SEP  = 0x7E
+
+
+def make_mosaic_half_glyphs(pattern, separated=False):
+    """
+    Build CHAR_HEIGHT scanline bytes for the LEFT and RIGHT halves of mosaic
+    pattern (0-63).
+
+    Returns (left_rows, right_rows) — each a list of CHAR_HEIGHT bytes.
+
+    Bit layout of `pattern`:
+      bit0=top-left, bit1=top-right, bit2=mid-left,
+      bit3=mid-right, bit4=bot-left, bit5=bot-right
+    """
+    tl = bool(pattern & 0x01)
+    tr = bool(pattern & 0x02)
+    ml = bool(pattern & 0x04)
+    mr = bool(pattern & 0x08)
+    bl = bool(pattern & 0x10)
+    br = bool(pattern & 0x20)
+
+    fill = LEFT_SEP if separated else LEFT_CONT
+
+    left_rows  = []
+    right_rows = []
+    for row_idx, (row_start, row_end) in enumerate(ROW_SPANS):
+        left_on  = [tl, ml, bl][row_idx]
+        right_on = [tr, mr, br][row_idx]
+        left_byte  = fill if left_on  else 0
+        right_byte = fill if right_on else 0
+        n = row_end - row_start
+        left_rows.extend([left_byte]  * n)
+        right_rows.extend([right_byte] * n)
+
+    assert len(left_rows)  == CHAR_HEIGHT
+    assert len(right_rows) == CHAR_HEIGHT
+    return left_rows, right_rows
+
+
+def build_mosaic_font():
+    """
+    Build list of 256 glyph byte-arrays.
+
+    Slot layout:
+      0x00-0x3F : LEFT  half of contiguous patterns 0-63
+      0x40-0x7F : LEFT  half of separated  patterns 0-63
+      0x80-0xBF : RIGHT half of contiguous patterns 0-63
+      0xC0-0xFF : RIGHT half of separated  patterns 0-63
+    """
+    font = [None] * NUM_CHARS
+    blank = [0] * CHAR_HEIGHT
+
+    for pattern in range(64):
+        left_cont, right_cont = make_mosaic_half_glyphs(pattern, separated=False)
+        left_sep,  right_sep  = make_mosaic_half_glyphs(pattern, separated=True)
+        font[pattern]        = left_cont
+        font[pattern + 0x40] = left_sep
+        font[pattern + 0x80] = right_cont
+        font[pattern + 0xC0] = right_sep
+
+    return font
+
+
+def font_to_bmp_array(font):
+    """Convert font list to BMP-format bytearray (bottom-to-top rows)."""
+    bmp = bytearray(160 * CHARS_PER_ROW)
+    for char_idx, glyph in enumerate(font):
+        char_row = char_idx // CHARS_PER_ROW
+        byte_col = char_idx  % CHARS_PER_ROW
+        for scanline, byte_val in enumerate(glyph):
+            br = 159 - char_row * CHAR_HEIGHT - scanline
+            bmp[br * CHARS_PER_ROW + byte_col] = byte_val
+    return bmp
+
+
+def write_header(bmp_data, out_path):
+    header = """\
+// -----------------------------------------------------------------------------
+// font_viewdata_mosaic.h — Viewdata/Prestel mosaic (G1) font for VersaTerm
+//
+// Format : 256 chars × 20 scanlines, 8 pixels wide (1 byte per scanline).
+// Bitmap : 256 × 160 pixels (32 chars/row × 8 char-rows), BMP bottom-to-top.
+// charHeight  = 20
+// bitmapWidth = 256, bitmapHeight = 160
+//
+// 16-px-native split (LEFT byte | RIGHT byte per scanline):
+//   0x00-0x3F : LEFT  half of contiguous patterns (bit 0=TL, 2=ML, 4=BL)
+//   0x40-0x7F : LEFT  half of separated  patterns
+//   0x80-0xBF : RIGHT half of contiguous patterns (bit 1=TR, 3=MR, 5=BR)
+//   0xC0-0xFF : RIGHT half of separated  patterns
+//
+// Left  half slot  = pattern + (separated ? 0x40 : 0x00)
+// Right half slot  = left_slot | 0x80
+// Both rendered with ATTR_BOLD to select the mosaic font.
+//
+// Generated by tools/gen_viewdata_mosaic.py — do not edit by hand.
+// -----------------------------------------------------------------------------
+
+static unsigned char __in_flash(".font") font_viewdata_mosaic_bmp[] = {
+"""
+    hex_vals = [f'0x{b:02X}' for b in bmp_data]
+    lines = []
+    for i in range(0, len(hex_vals), 16):
+        lines.append('  ' + ', '.join(hex_vals[i:i+16]) + ',')
+    header += '\n'.join(lines)
+    header += '\n};\n'
+
+    with open(out_path, 'w') as f:
+        f.write(header)
+
+
+def main():
+    import sys
+    out_path = OUT_FILE
+    if len(sys.argv) > 1:
+        out_path = sys.argv[1]
+
+    print('Generating Viewdata mosaic font ...')
+    font = build_mosaic_font()
+    bmp_data = font_to_bmp_array(font)
+    print(f'  BMP data: {len(bmp_data)} bytes')
+    print(f'Writing: {out_path}')
+    write_header(bmp_data, out_path)
+    print('Done.')
+
+
+if __name__ == '__main__':
+    main()

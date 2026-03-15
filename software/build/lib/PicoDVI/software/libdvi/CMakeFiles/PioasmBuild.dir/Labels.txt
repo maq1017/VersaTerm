@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+/Users/maquis/code/VersaTerm/software/build/lib/PicoDVI/software/libdvi/CMakeFiles/PioasmBuild
+/Users/maquis/code/VersaTerm/software/build/lib/PicoDVI/software/libdvi/CMakeFiles/PioasmBuild.rule
+/Users/maquis/code/VersaTerm/software/build/lib/PicoDVI/software/libdvi/CMakeFiles/PioasmBuild-complete.rule
+/Users/maquis/code/VersaTerm/software/build/lib/PicoDVI/software/libdvi/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
+/Users/maquis/code/VersaTerm/software/build/lib/PicoDVI/software/libdvi/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+/Users/maquis/code/VersaTerm/software/build/lib/PicoDVI/software/libdvi/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+/Users/maquis/code/VersaTerm/software/build/lib/PicoDVI/software/libdvi/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+/Users/maquis/code/VersaTerm/software/build/lib/PicoDVI/software/libdvi/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+/Users/maquis/code/VersaTerm/software/build/lib/PicoDVI/software/libdvi/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+/Users/maquis/code/VersaTerm/software/build/lib/PicoDVI/software/libdvi/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule

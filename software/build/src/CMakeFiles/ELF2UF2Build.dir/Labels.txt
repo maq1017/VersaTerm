@@ -1,0 +1,13 @@
+# Target labels
+ ELF2UF2Build
+# Source files and their labels
+/Users/maquis/code/VersaTerm/software/build/src/CMakeFiles/ELF2UF2Build
+/Users/maquis/code/VersaTerm/software/build/src/CMakeFiles/ELF2UF2Build.rule
+/Users/maquis/code/VersaTerm/software/build/src/CMakeFiles/ELF2UF2Build-complete.rule
+/Users/maquis/code/VersaTerm/software/build/src/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build.rule
+/Users/maquis/code/VersaTerm/software/build/src/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure.rule
+/Users/maquis/code/VersaTerm/software/build/src/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download.rule
+/Users/maquis/code/VersaTerm/software/build/src/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-install.rule
+/Users/maquis/code/VersaTerm/software/build/src/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir.rule
+/Users/maquis/code/VersaTerm/software/build/src/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch.rule
+/Users/maquis/code/VersaTerm/software/build/src/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update.rule

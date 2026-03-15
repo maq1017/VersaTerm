@@ -1,0 +1,2603 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/uname"
+      - "/opt/homebrew/sbin/uname"
+      - "/opt/local/bin/uname"
+      - "/opt/local/sbin/uname"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/uname"
+      - "/Users/maquis/bin/uname"
+      - "/usr/local/bin/uname"
+      - "/System/Cryptexes/App/usr/bin/uname"
+    found: "/usr/bin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "lib/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:12 (find_program)"
+      - "lib/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:20 (pico_find_compiler)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "PICO_COMPILER_CC"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "lib/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:24 (find_program)"
+      - "lib/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:20 (pico_find_compiler)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "PICO_COMPILER_CC"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-gcc"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "lib/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:12 (find_program)"
+      - "lib/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:21 (pico_find_compiler)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "PICO_COMPILER_CXX"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-g++"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "lib/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:24 (find_program)"
+      - "lib/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:21 (pico_find_compiler)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "PICO_COMPILER_CXX"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-g++"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-g++"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "lib/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:12 (find_program)"
+      - "lib/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:23 (pico_find_compiler)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "PICO_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-objcopy"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "lib/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:24 (find_program)"
+      - "lib/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:23 (pico_find_compiler)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "PICO_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-objcopy"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "lib/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:12 (find_program)"
+      - "lib/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:24 (pico_find_compiler)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "PICO_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-objdump"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "lib/pico-sdk/cmake/preload/toolchains/find_compiler.cmake:24 (find_program)"
+      - "lib/pico-sdk/cmake/preload/toolchains/pico_arm_gcc.cmake:24 (pico_find_compiler)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "PICO_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-objdump"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-objdump"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:207 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The target system is: PICO -  - cortex-m0plus
+      The host system is: Darwin - 25.3.0 - arm64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/gmake"
+      - "/opt/homebrew/sbin/gmake"
+      - "/opt/local/bin/gmake"
+      - "/opt/local/sbin/gmake"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/gmake"
+      - "/Users/maquis/bin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/System/Cryptexes/App/usr/bin/gmake"
+      - "/usr/bin/gmake"
+      - "/bin/gmake"
+      - "/usr/sbin/gmake"
+      - "/sbin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/gmake"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/gmake"
+      - "/opt/pmk/env/global/bin/gmake"
+      - "/opt/X11/bin/gmake"
+      - "/Library/Apple/usr/bin/gmake"
+      - "/Users/maquis/.local/bin/gmake"
+      - "/opt/homebrew/bin/make"
+      - "/opt/homebrew/sbin/make"
+      - "/opt/local/bin/make"
+      - "/opt/local/sbin/make"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/make"
+      - "/Users/maquis/bin/make"
+      - "/usr/local/bin/make"
+      - "/System/Cryptexes/App/usr/bin/make"
+    found: "/usr/bin/make"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+      - "/Users/maquis/code/VersaTerm/software/lib/pico-sdk/cmake/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m0plus;-mthumb
+      Id flags:  
+      
+      The output was:
+      1
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x16): undefined reference to `_exit'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_exit): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-exit.o)
+      exit.c:(.text.exit+0x16): dangerous relocation: unsupported relocation
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0xc): undefined reference to `_close'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_close): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-closer.o)
+      closer.c:(.text._close_r+0xc): dangerous relocation: unsupported relocation
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x10): undefined reference to `_lseek'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_lseek): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lseekr.o)
+      lseekr.c:(.text._lseek_r+0x10): dangerous relocation: unsupported relocation
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x10): undefined reference to `_read'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_read): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-readr.o)
+      readr.c:(.text._read_r+0x10): dangerous relocation: unsupported relocation
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0xc): undefined reference to `_sbrk'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_sbrk): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o)
+      sbrkr.c:(.text._sbrk_r+0xc): dangerous relocation: unsupported relocation
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x10): undefined reference to `_write'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_write): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-writer.o)
+      writer.c:(.text._write_r+0x10): dangerous relocation: unsupported relocation
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+      - "/Users/maquis/code/VersaTerm/software/lib/pico-sdk/cmake/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m0plus;-mthumb
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /Users/maquis/code/VersaTerm/software/build/CMakeFiles/4.2.3/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ar"
+      - "ar"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-ar"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ranlib"
+      - "ranlib"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-strip"
+      - "strip"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-strip"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ld"
+      - "ld"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-ld"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-nm"
+      - "nm"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-nm"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-readelf"
+      - "readelf"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-readelf"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/arm-none-eabi-dlltool"
+      - "/opt/homebrew/sbin/arm-none-eabi-dlltool"
+      - "/opt/local/bin/arm-none-eabi-dlltool"
+      - "/opt/local/sbin/arm-none-eabi-dlltool"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-dlltool"
+      - "/Users/maquis/bin/arm-none-eabi-dlltool"
+      - "/usr/local/bin/arm-none-eabi-dlltool"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-dlltool"
+      - "/usr/bin/arm-none-eabi-dlltool"
+      - "/bin/arm-none-eabi-dlltool"
+      - "/usr/sbin/arm-none-eabi-dlltool"
+      - "/sbin/arm-none-eabi-dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-dlltool"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-dlltool"
+      - "/opt/X11/bin/arm-none-eabi-dlltool"
+      - "/Library/Apple/usr/bin/arm-none-eabi-dlltool"
+      - "/Users/maquis/.local/bin/arm-none-eabi-dlltool"
+      - "/opt/homebrew/bin/dlltool"
+      - "/opt/homebrew/sbin/dlltool"
+      - "/opt/local/bin/dlltool"
+      - "/opt/local/sbin/dlltool"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/dlltool"
+      - "/Users/maquis/bin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/System/Cryptexes/App/usr/bin/dlltool"
+      - "/usr/bin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/sbin/dlltool"
+      - "/sbin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/dlltool"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/dlltool"
+      - "/opt/pmk/env/global/bin/dlltool"
+      - "/opt/X11/bin/dlltool"
+      - "/Library/Apple/usr/bin/dlltool"
+      - "/Users/maquis/.local/bin/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-addr2line"
+      - "addr2line"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    found: "/opt/homebrew/bin/arm-none-eabi-addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-tapi"
+      - "tapi"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/arm-none-eabi-tapi"
+      - "/opt/homebrew/sbin/arm-none-eabi-tapi"
+      - "/opt/local/bin/arm-none-eabi-tapi"
+      - "/opt/local/sbin/arm-none-eabi-tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-tapi"
+      - "/Users/maquis/bin/arm-none-eabi-tapi"
+      - "/usr/local/bin/arm-none-eabi-tapi"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-tapi"
+      - "/usr/bin/arm-none-eabi-tapi"
+      - "/bin/arm-none-eabi-tapi"
+      - "/usr/sbin/arm-none-eabi-tapi"
+      - "/sbin/arm-none-eabi-tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-tapi"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-tapi"
+      - "/opt/X11/bin/arm-none-eabi-tapi"
+      - "/Library/Apple/usr/bin/arm-none-eabi-tapi"
+      - "/Users/maquis/.local/bin/arm-none-eabi-tapi"
+      - "/opt/homebrew/bin/tapi"
+      - "/opt/homebrew/sbin/tapi"
+      - "/opt/local/bin/tapi"
+      - "/opt/local/sbin/tapi"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/tapi"
+      - "/Users/maquis/bin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/System/Cryptexes/App/usr/bin/tapi"
+      - "/usr/bin/tapi"
+      - "/bin/tapi"
+      - "/usr/sbin/tapi"
+      - "/sbin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/tapi"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/tapi"
+      - "/opt/pmk/env/global/bin/tapi"
+      - "/opt/X11/bin/tapi"
+      - "/Library/Apple/usr/bin/tapi"
+      - "/Users/maquis/.local/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-15.2"
+      - "arm-none-eabi-gcc-ar-15"
+      - "arm-none-eabi-gcc-ar15"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/local/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ar-15.2"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/usr/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/usr/sbin/arm-none-eabi-gcc-ar-15.2"
+      - "/sbin/arm-none-eabi-gcc-ar-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ar-15"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ar-15"
+      - "/opt/local/bin/arm-none-eabi-gcc-ar-15"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ar-15"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ar-15"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ar-15"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-15"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ar-15"
+      - "/usr/bin/arm-none-eabi-gcc-ar-15"
+      - "/bin/arm-none-eabi-gcc-ar-15"
+      - "/usr/sbin/arm-none-eabi-gcc-ar-15"
+      - "/sbin/arm-none-eabi-gcc-ar-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ar-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ar-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ar-15"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ar-15"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ar-15"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ar-15"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ar-15"
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ar15"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ar15"
+      - "/opt/local/bin/arm-none-eabi-gcc-ar15"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ar15"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ar15"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ar15"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar15"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ar15"
+      - "/usr/bin/arm-none-eabi-gcc-ar15"
+      - "/bin/arm-none-eabi-gcc-ar15"
+      - "/usr/sbin/arm-none-eabi-gcc-ar15"
+      - "/sbin/arm-none-eabi-gcc-ar15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ar15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ar15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ar15"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ar15"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ar15"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ar15"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ar15"
+    found: "/opt/homebrew/bin/arm-none-eabi-gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-15.2"
+      - "arm-none-eabi-gcc-ranlib-15"
+      - "arm-none-eabi-gcc-ranlib15"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/local/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/sbin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/local/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ranlib-15"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib-15"
+      - "/sbin/arm-none-eabi-gcc-ranlib-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib15"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ranlib15"
+      - "/opt/local/bin/arm-none-eabi-gcc-ranlib15"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ranlib15"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ranlib15"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ranlib15"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib15"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ranlib15"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib15"
+      - "/bin/arm-none-eabi-gcc-ranlib15"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib15"
+      - "/sbin/arm-none-eabi-gcc-ranlib15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ranlib15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ranlib15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ranlib15"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ranlib15"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ranlib15"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ranlib15"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ranlib15"
+    found: "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+      - "/Users/maquis/code/VersaTerm/software/lib/pico-sdk/cmake/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m0plus;-mthumb
+      Id flags:  
+      
+      The output was:
+      1
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x16): undefined reference to `_exit'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_exit): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-exit.o)
+      exit.c:(.text.exit+0x16): dangerous relocation: unsupported relocation
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0xc): undefined reference to `_close'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_close): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-closer.o)
+      closer.c:(.text._close_r+0xc): dangerous relocation: unsupported relocation
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x10): undefined reference to `_lseek'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_lseek): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lseekr.o)
+      lseekr.c:(.text._lseek_r+0x10): dangerous relocation: unsupported relocation
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x10): undefined reference to `_read'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_read): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-readr.o)
+      readr.c:(.text._read_r+0x10): dangerous relocation: unsupported relocation
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0xc): undefined reference to `_sbrk'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_sbrk): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o)
+      sbrkr.c:(.text._sbrk_r+0xc): dangerous relocation: unsupported relocation
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x10): undefined reference to `_write'
+      /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_write): Unknown destination type (ARM/Thumb) in /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-writer.o)
+      writer.c:(.text._write_r+0x10): dangerous relocation: unsupported relocation
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "/opt/homebrew/share/cmake/Modules/"
+      - "/Users/maquis/code/VersaTerm/software/lib/pico-sdk/cmake/"
+    found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/homebrew/bin/arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m0plus;-mthumb
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/maquis/code/VersaTerm/software/build/CMakeFiles/4.2.3/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-15.2"
+      - "arm-none-eabi-gcc-ar-15"
+      - "arm-none-eabi-gcc-ar15"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/local/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ar-15.2"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/usr/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/usr/sbin/arm-none-eabi-gcc-ar-15.2"
+      - "/sbin/arm-none-eabi-gcc-ar-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ar-15.2"
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ar-15"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ar-15"
+      - "/opt/local/bin/arm-none-eabi-gcc-ar-15"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ar-15"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ar-15"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ar-15"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-15"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ar-15"
+      - "/usr/bin/arm-none-eabi-gcc-ar-15"
+      - "/bin/arm-none-eabi-gcc-ar-15"
+      - "/usr/sbin/arm-none-eabi-gcc-ar-15"
+      - "/sbin/arm-none-eabi-gcc-ar-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ar-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ar-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ar-15"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ar-15"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ar-15"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ar-15"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ar-15"
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ar15"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ar15"
+      - "/opt/local/bin/arm-none-eabi-gcc-ar15"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ar15"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ar15"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ar15"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar15"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ar15"
+      - "/usr/bin/arm-none-eabi-gcc-ar15"
+      - "/bin/arm-none-eabi-gcc-ar15"
+      - "/usr/sbin/arm-none-eabi-gcc-ar15"
+      - "/sbin/arm-none-eabi-gcc-ar15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ar15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ar15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ar15"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ar15"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ar15"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ar15"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ar15"
+    found: "/opt/homebrew/bin/arm-none-eabi-gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-15.2"
+      - "arm-none-eabi-gcc-ranlib-15"
+      - "arm-none-eabi-gcc-ranlib15"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/local/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/sbin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ranlib-15.2"
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/local/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ranlib-15"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib-15"
+      - "/sbin/arm-none-eabi-gcc-ranlib-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ranlib-15"
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib15"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ranlib15"
+      - "/opt/local/bin/arm-none-eabi-gcc-ranlib15"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ranlib15"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ranlib15"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ranlib15"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib15"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ranlib15"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib15"
+      - "/bin/arm-none-eabi-gcc-ranlib15"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib15"
+      - "/sbin/arm-none-eabi-gcc-ranlib15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ranlib15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ranlib15"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ranlib15"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ranlib15"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ranlib15"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ranlib15"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ranlib15"
+    found: "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 15.2.1 20251203
+      Copyright (C) 2025 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-"
+      - "arm-none-eabi-gcc-ar-"
+      - "arm-none-eabi-gcc-ar"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ar-"
+      - "/opt/local/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ar-"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ar-"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/bin/arm-none-eabi-gcc-ar-"
+      - "/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/sbin/arm-none-eabi-gcc-ar-"
+      - "/sbin/arm-none-eabi-gcc-ar-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ar-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ar-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ar-"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ar-"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ar-"
+      - "/opt/local/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ar-"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ar-"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/local/bin/arm-none-eabi-gcc-ar-"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/bin/arm-none-eabi-gcc-ar-"
+      - "/bin/arm-none-eabi-gcc-ar-"
+      - "/usr/sbin/arm-none-eabi-gcc-ar-"
+      - "/sbin/arm-none-eabi-gcc-ar-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ar-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ar-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ar-"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ar-"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ar-"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ar-"
+    found: "/opt/homebrew/bin/arm-none-eabi-gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-"
+      - "arm-none-eabi-gcc-ranlib-"
+      - "arm-none-eabi-gcc-ranlib"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+    searched_directories:
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ranlib-"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ranlib-"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-"
+      - "/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib-"
+      - "/sbin/arm-none-eabi-gcc-ranlib-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ranlib-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ranlib-"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ranlib-"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/homebrew/sbin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/local/sbin/arm-none-eabi-gcc-ranlib-"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/arm-none-eabi-gcc-ranlib-"
+      - "/Users/maquis/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/System/Cryptexes/App/usr/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/bin/arm-none-eabi-gcc-ranlib-"
+      - "/bin/arm-none-eabi-gcc-ranlib-"
+      - "/usr/sbin/arm-none-eabi-gcc-ranlib-"
+      - "/sbin/arm-none-eabi-gcc-ranlib-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/arm-none-eabi-gcc-ranlib-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/arm-none-eabi-gcc-ranlib-"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/pmk/env/global/bin/arm-none-eabi-gcc-ranlib-"
+      - "/opt/X11/bin/arm-none-eabi-gcc-ranlib-"
+      - "/Library/Apple/usr/bin/arm-none-eabi-gcc-ranlib-"
+      - "/Users/maquis/.local/bin/arm-none-eabi-gcc-ranlib-"
+    found: "/opt/homebrew/bin/arm-none-eabi-gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindPython/Support.cmake:2165 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/FindPython3.cmake:671 (include)"
+      - "lib/pico-sdk/src/rp2_common/boot_stage2/CMakeLists.txt:63 (find_package)"
+      - "lib/pico-sdk/src/rp2_common/boot_stage2/CMakeLists.txt:100 (pico_define_boot_stage2)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.15mu"
+      - "python3.15m"
+      - "python3.15u"
+      - "python3.15"
+      - "python3.15dmu"
+      - "python3.15dm"
+      - "python3.15du"
+      - "python3.15d"
+      - "python3"
+      - "python"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindPython/Support.cmake:2165 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/FindPython3.cmake:671 (include)"
+      - "lib/pico-sdk/src/rp2_common/boot_stage2/CMakeLists.txt:63 (find_package)"
+      - "lib/pico-sdk/src/rp2_common/boot_stage2/CMakeLists.txt:100 (pico_define_boot_stage2)"
+    mode: "program"
+    variable: "_Python3_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: false
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "python3.13mu"
+      - "python3.13m"
+      - "python3.13u"
+      - "python3.13"
+      - "python3.13dmu"
+      - "python3.13dm"
+      - "python3.13du"
+      - "python3.13d"
+      - "python3"
+      - "python"
+    candidate_directories:
+      - "/opt/homebrew/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/Frameworks/Python.framework/Versions/3.13/Scripts/"
+      - "/opt/homebrew/Frameworks/Python.framework/Versions/3.13/"
+    searched_directories:
+      - "/opt/homebrew/Frameworks/Python.framework/Versions/3.13/bin/python3.13mu"
+      - "/opt/homebrew/Frameworks/Python.framework/Versions/3.13/bin/python3.13m"
+      - "/opt/homebrew/Frameworks/Python.framework/Versions/3.13/bin/python3.13u"
+    found: "/opt/homebrew/Frameworks/Python.framework/Versions/3.13/bin/python3.13"
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindDoxygen.cmake:770 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/FindDoxygen.cmake:955 (_Doxygen_find_doxygen)"
+      - "lib/pico-sdk/docs/CMakeLists.txt:1 (find_package)"
+    mode: "program"
+    variable: "DOXYGEN_EXECUTABLE"
+    description: "Doxygen documentation generation tool (https://www.doxygen.nl)"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "doxygen"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+      - "/Applications/Doxygen.app/Contents/Resources/"
+      - "/Applications/Doxygen.app/Contents/MacOS/"
+      - "/Applications/Utilities/Doxygen.app/Contents/Resources/"
+      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/"
+    searched_directories:
+      - "/opt/homebrew/bin/doxygen"
+      - "/opt/homebrew/sbin/doxygen"
+      - "/opt/local/bin/doxygen"
+      - "/opt/local/sbin/doxygen"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/doxygen"
+      - "/Users/maquis/bin/doxygen"
+      - "/usr/local/bin/doxygen"
+      - "/System/Cryptexes/App/usr/bin/doxygen"
+      - "/usr/bin/doxygen"
+      - "/bin/doxygen"
+      - "/usr/sbin/doxygen"
+      - "/sbin/doxygen"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/doxygen"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/doxygen"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/doxygen"
+      - "/opt/pmk/env/global/bin/doxygen"
+      - "/opt/X11/bin/doxygen"
+      - "/Library/Apple/usr/bin/doxygen"
+      - "/Users/maquis/.local/bin/doxygen"
+      - "/Applications/Doxygen.app/Contents/Resources/doxygen"
+      - "/Applications/Doxygen.app/Contents/MacOS/doxygen"
+      - "/Applications/Utilities/Doxygen.app/Contents/Resources/doxygen"
+      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/doxygen"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindDoxygen.cmake:858 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/FindDoxygen.cmake:959 (_Doxygen_find_dot)"
+      - "lib/pico-sdk/docs/CMakeLists.txt:1 (find_package)"
+    mode: "program"
+    variable: "DOXYGEN_DOT_EXECUTABLE"
+    description: "Dot tool for use with Doxygen"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dot"
+    candidate_directories:
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/"
+      - "/Users/maquis/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
+      - "/opt/X11/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/maquis/.local/bin/"
+      - "/ATT/Graphviz/bin/"
+      - "C:/Program Files/ATT/Graphviz/bin/"
+      - "/Applications/Graphviz.app/Contents/MacOS/"
+      - "/Applications/Utilities/Graphviz.app/Contents/MacOS/"
+      - "/Applications/Doxygen.app/Contents/Resources/"
+      - "/Applications/Doxygen.app/Contents/MacOS/"
+      - "/Applications/Utilities/Doxygen.app/Contents/Resources/"
+      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/"
+    searched_directories:
+      - "/opt/homebrew/bin/dot"
+      - "/opt/homebrew/sbin/dot"
+      - "/opt/local/bin/dot"
+      - "/opt/local/sbin/dot"
+      - "/Library/Frameworks/Python.framework/Versions/3.10/bin/dot"
+      - "/Users/maquis/bin/dot"
+      - "/usr/local/bin/dot"
+      - "/System/Cryptexes/App/usr/bin/dot"
+      - "/usr/bin/dot"
+      - "/bin/dot"
+      - "/usr/sbin/dot"
+      - "/sbin/dot"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/dot"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/dot"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/dot"
+      - "/opt/pmk/env/global/bin/dot"
+      - "/opt/X11/bin/dot"
+      - "/Library/Apple/usr/bin/dot"
+      - "/Users/maquis/.local/bin/dot"
+      - "/ATT/Graphviz/bin/dot"
+      - "C:/Program Files/ATT/Graphviz/bin/dot"
+      - "/Applications/Graphviz.app/Contents/MacOS/dot"
+      - "/Applications/Utilities/Graphviz.app/Contents/MacOS/dot"
+      - "/Applications/Doxygen.app/Contents/Resources/dot"
+      - "/Applications/Doxygen.app/Contents/MacOS/dot"
+      - "/Applications/Utilities/Doxygen.app/Contents/Resources/dot"
+      - "/Applications/Utilities/Doxygen.app/Contents/MacOS/dot"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/opt/local/bin"
+        - "/opt/local/sbin"
+        - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/maquis/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
+        - "/opt/X11/bin"
+        - "/Library/Apple/usr/bin"
+        - "/Users/maquis/.local/bin"
+        - "/Users/maquis/.local/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_FIND_ROOT_PATH: "/opt/homebrew"
+...

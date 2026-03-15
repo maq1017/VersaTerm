@@ -20,6 +20,7 @@
 #include "framebuf.h"
 #include "font.h"
 #include "terminal.h"
+#include "terminal_viewdata.h"
 #include "config.h"
 #include "pins.h"
 #include "serial.h"
@@ -1257,6 +1258,10 @@ void INFLASHFUN terminal_receive_char(char c)
     case CFG_TTYPE_PETSCII:
       terminal_receive_char_petscii(c);
       break;
+
+    case CFG_TTYPE_VIEWDATA:
+      terminal_viewdata_receive_char(c);
+      break;
     }
 }
 
@@ -1452,8 +1457,10 @@ void INFLASHFUN terminal_process_key(uint16_t key)
       sound_play_tone(880, 50, config_get_audible_bell_volume(), false);
       localecho = !localecho;
     }
-  else if( config_get_terminal_type()==2 )
+  else if( config_get_terminal_type()==CFG_TTYPE_PETSCII )
     terminal_process_key_petscii(key);
+  else if( config_get_terminal_type()==CFG_TTYPE_VIEWDATA )
+    terminal_viewdata_process_key(key);
   else
     terminal_process_key_vt(key);
 }
@@ -1468,5 +1475,8 @@ void INFLASHFUN terminal_init()
 
 void INFLASHFUN terminal_apply_settings()
 {
-  terminal_init();
+  if( config_get_terminal_type()==CFG_TTYPE_VIEWDATA )
+    terminal_viewdata_apply_settings();
+  else
+    terminal_init();
 }

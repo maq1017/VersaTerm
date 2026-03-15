@@ -45,6 +45,8 @@
 #include "font_terminus.h"
 #include "font_terminus_bold.h"
 #include "font_petscii.h"
+#include "font_viewdata.h"
+#include "font_viewdata_mosaic.h"
 
 #define INFLASHFUN __in_flash(".configfun") 
 
@@ -98,8 +100,9 @@ struct FontInfoStruct
 
 
 static uint8_t cur_font_normal = 0, cur_font_bold = 0, font_char_height = 16;
-static uint8_t __attribute__((aligned(4), section(_IMG_ASSET_SECTION ".font"))) font_blinkoff[8*256*16];
-static uint8_t __attribute__((aligned(4), section(_IMG_ASSET_SECTION ".font"))) font_blinkon[8*256*16];
+// Sized for up to 20 scanlines per character (Viewdata font needs 20)
+static uint8_t __attribute__((aligned(4), section(_IMG_ASSET_SECTION ".font"))) font_blinkoff[8*256*20];
+static uint8_t __attribute__((aligned(4), section(_IMG_ASSET_SECTION ".font"))) font_blinkon[8*256*20];
 
 
 bool font_have_boldfont()
@@ -136,7 +139,9 @@ const uint8_t *font_get_bmpdata(uint8_t fontNum)
     case FONT_ID_VGA:      return font_vga_bmp;
     case FONT_ID_TERM:     return font_terminus_bmp;
     case FONT_ID_TERMBOLD: return font_terminus_bold_bmp;
-    case FONT_ID_PETSCII:  return font_petscii_bmp;
+    case FONT_ID_PETSCII:          return font_petscii_bmp;
+    case FONT_ID_VIEWDATA:         return font_viewdata_bmp;
+    case FONT_ID_VIEWDATA_MOSAIC:  return font_viewdata_mosaic_bmp;
     case FONT_ID_USER1:
     case FONT_ID_USER2:
     case FONT_ID_USER3:
@@ -172,7 +177,12 @@ bool INFLASHFUN font_get_font_info(uint8_t fontNum, uint32_t *bitmapWidth, uint3
     case FONT_ID_PETSCII:
       bh=128; bw=128; ch=8; ur=7;
       break;
-      
+
+    case FONT_ID_VIEWDATA:
+    case FONT_ID_VIEWDATA_MOSAIC:
+      bh=160; bw=256; ch=20; ur=19;
+      break;
+
     case FONT_ID_USER1:
     case FONT_ID_USER2:
     case FONT_ID_USER3:
@@ -206,7 +216,9 @@ const INFLASHFUN char *font_get_name(uint8_t fontNum)
     case FONT_ID_VGA:      return "VGA";
     case FONT_ID_TERM:     return "Terminus";
     case FONT_ID_TERMBOLD: return "Terminus bold";
-    case FONT_ID_PETSCII:  return "PETSCII";
+    case FONT_ID_PETSCII:          return "PETSCII";
+    case FONT_ID_VIEWDATA:         return "Teletext";
+    case FONT_ID_VIEWDATA_MOSAIC:  return "Teletext mosaic";
     case FONT_ID_USER1: 
     case FONT_ID_USER2:
     case FONT_ID_USER3:
@@ -309,8 +321,8 @@ bool INFLASHFUN receiveFontDataPacket(unsigned long no, char* charData, int size
             { 
               fontCharHeight = (bitmapHeight*bitmapWidth) / 2048;
 
-              if( fontCharHeight<8 || fontCharHeight>16 )
-                error = "Character height must be between 8 and 16 pixels (inclusive)";
+              if( fontCharHeight<8 || fontCharHeight>20 )
+                error = "Character height must be between 8 and 20 pixels (inclusive)";
               else if( (bitmapHeight % fontCharHeight) != 0 )
                 error = "Bitmap height must be a multiple of the character height";
               else if( (data[0x1c]+(data[0x1d]<<8)) != 1 )
@@ -416,7 +428,7 @@ static uint8_t INFLASHFUN reverse_bits(uint8_t b)
 }
 
 
-static bool INFLASHFUN set_font_data(uint32_t font_offset, uint32_t bitmapWidth, uint32_t bitmapHeight, uint8_t charHeight, uint8_t underlineRow, const uint8_t *bitmapData)
+static bool INFLASHFUN set_font_data(uint32_t font_offset, uint32_t bitmapWidth, uint32_t bitmapHeight, uint8_t charHeight, uint8_t underlineRow, const uint8_t *bitmapData, uint8_t right_mask)
 {
   if( (bitmapWidth * bitmapHeight) == (2048*charHeight) && bitmapData!=NULL && charHeight>0 )
     {
@@ -428,6 +440,12 @@ static bool INFLASHFUN set_font_data(uint32_t font_offset, uint32_t bitmapWidth,
 
             uint32_t offset = cr*256*8+cn;
             uint8_t d   = bitmapData[br*bitmapWidth/8+bc];
+            // For Viewdata alpha: fold the rightmost pixel (bit 0) into the
+            // second-rightmost (bit 1) then clear bit 0.  This preserves right-edge
+            // curves (O, D, C …) while leaving a blank column for the inter-character
+            // gap that the double-width renderer widens to 2 screen pixels.
+            if( right_mask == 0xFE ) d = (d & 0xFE) | ((d << 1) & 0x02);
+            else                     d &= right_mask;
             if( framebuf_is_dvi() ) d = reverse_bits(d);
             uint8_t du  = cr==underlineRow ? 255 : d;
             font_blinkoff[font_offset+offset+256*0] = d;
@@ -436,8 +454,8 @@ static bool INFLASHFUN set_font_data(uint32_t font_offset, uint32_t bitmapWidth,
             font_blinkoff[font_offset+offset+256*3] = du;
             font_blinkon[font_offset+offset+256*0]  = d;
             font_blinkon[font_offset+offset+256*1]  = du;
-            font_blinkon[font_offset+offset+256*2]  = ~d;
-            font_blinkon[font_offset+offset+256*3]  = ~du;
+            font_blinkon[font_offset+offset+256*2]  = 0;
+            font_blinkon[font_offset+offset+256*3]  = 0;
           }
       
       return true;
@@ -453,22 +471,27 @@ bool INFLASHFUN font_apply_font(uint8_t font, bool bold)
   uint8_t charHeight, underlineRow;
   uint32_t bitmapHeight, bitmapWidth;
   
-  if( font<=FONT_ID_USER4 )
+  if( font<=FONT_ID_USER4 || font==FONT_ID_VIEWDATA || font==FONT_ID_VIEWDATA_MOSAIC )
     {
       if( bold && font==0 ) font = cur_font_normal;
       if( font!=(bold ? cur_font_bold : cur_font_normal) )
         {
           if( font_get_font_info(font, &bitmapWidth, &bitmapHeight, &charHeight, &underlineRow) )
-            if( set_font_data(bold ? 4*256 : 0, bitmapWidth, bitmapHeight, charHeight, underlineRow, font_get_bmpdata(font)) )
-              {
-                if( bold )
-                  cur_font_bold = font;
-                else
-                  cur_font_normal = font;
-                
-                font_char_height = charHeight;
-                res = true;
-              }
+            {
+              // Viewdata fonts use a 16-px-native split (left/right half bytes),
+              // so spacing is built into the font data — no masking needed.
+              uint8_t right_mask = 0xFF;
+              if( set_font_data(bold ? 4*256 : 0, bitmapWidth, bitmapHeight, charHeight, underlineRow, font_get_bmpdata(font), right_mask) )
+                {
+                  if( bold )
+                    cur_font_bold = font;
+                  else
+                    cur_font_normal = font;
+
+                  font_char_height = charHeight;
+                  res = true;
+                }
+            }
         }
       else
         res = true;

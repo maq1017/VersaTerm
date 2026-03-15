@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#Mac Stuff
+.DS_Store
+software/tools/__pycache__
+
+#Build Folder
+software/build

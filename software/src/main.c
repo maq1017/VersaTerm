@@ -197,6 +197,7 @@ int main()
   terminal_init();
   sound_init();
   config_show_splash();
+  apply_settings();
 
   while( true ) run_tasks(true);
 }

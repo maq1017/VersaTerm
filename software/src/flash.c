@@ -53,21 +53,16 @@ size_t flash_get_sector_size()
 
 int flash_write_partial(uint8_t sector, const void *data, size_t position, size_t size)
 {
-  int ok = 0;
+  static uint8_t mem[FLASH_SECTOR_SIZE];
 
   if( position+size <= FLASH_SECTOR_SIZE )
     {
-      uint8_t *mem = malloc(FLASH_SECTOR_SIZE);
-      if( mem!=NULL )
-        {
-          memcpy(mem, flash_get_read_ptr(sector), FLASH_SECTOR_SIZE);
-          memcpy(mem+position, data, size);
-          ok = flash_write(sector, mem, FLASH_SECTOR_SIZE);
-          free(mem);
-        }
+      memcpy(mem, flash_get_read_ptr(sector), FLASH_SECTOR_SIZE);
+      memcpy(mem+position, data, size);
+      return flash_write(sector, mem, FLASH_SECTOR_SIZE);
     }
 
-  return ok;
+  return 0;
 }
 
 

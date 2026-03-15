@@ -42,6 +42,7 @@ uint8_t framebuf_flash_color = 0;
 
 static bool screen_inverted = false, double_size_chars = false;
 static uint8_t num_rows = 0, num_cols = 0, xborder = 0, yborder = 0;
+static uint8_t last_char_height = 0;
 static bool is_dvi = true;
 static uint8_t color_map_inv[256];
 static uint16_t scroll_delay = 0;
@@ -473,6 +474,11 @@ void framebuf_delete(uint8_t x, uint8_t y, uint8_t n, uint8_t fg, uint8_t bg)
 
 void framebuf_set_screen_size(uint8_t ncols, uint8_t nrows)
 {
+  // If the font character height has changed, force full reinitialization so
+  // that yborder (vertical centering) is recalculated for the new font size.
+  uint8_t ch = font_get_char_height();
+  if( ch != last_char_height ) { num_rows = 0; last_char_height = ch; }
+
   if( nrows>MAX_ROWS ) nrows = MAX_ROWS;
   if( ncols>MAX_COLS ) ncols = MAX_COLS;
 

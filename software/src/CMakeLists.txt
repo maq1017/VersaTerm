@@ -5,6 +5,7 @@ add_executable(VersaTerm
         framebuf_dvi.c
         font.c
         terminal.c
+        terminal_viewdata.c
         keyboard.c
         keyboard_usb.c
         keyboard_ps2.c

@@ -53,6 +53,7 @@ dkms.conf
 
 #Mac Stuff
 .DS_Store
+software/tools/__pycache__
 
 #Build Folder
 software/build

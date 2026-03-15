@@ -82,8 +82,17 @@ def make_mosaic_half_glyphs(pattern, separated=False):
         left_byte  = fill if left_on  else 0
         right_byte = fill if right_on else 0
         n = row_end - row_start
-        left_rows.extend([left_byte]  * n)
-        right_rows.extend([right_byte] * n)
+        if separated:
+            # SAA5050 separated mode: blank the first and last scanline of each
+            # row-block (vertical gaps), in addition to the horizontal gaps
+            # already encoded in LEFT_SEP (0x7E).
+            for i in range(n):
+                vgap = (i == 0 or i == n - 1)
+                left_rows.append(0 if vgap else left_byte)
+                right_rows.append(0 if vgap else right_byte)
+        else:
+            left_rows.extend([left_byte]  * n)
+            right_rows.extend([right_byte] * n)
 
     assert len(left_rows)  == CHAR_HEIGHT
     assert len(right_rows) == CHAR_HEIGHT

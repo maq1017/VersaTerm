@@ -1,3 +1,0 @@
-/Users/maquis/code/VersaTerm/software/build/pioasm/CMakeFiles/pioasm.dir
-/Users/maquis/code/VersaTerm/software/build/pioasm/CMakeFiles/edit_cache.dir
-/Users/maquis/code/VersaTerm/software/build/pioasm/CMakeFiles/rebuild_cache.dir

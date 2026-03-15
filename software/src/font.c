@@ -217,8 +217,8 @@ const INFLASHFUN char *font_get_name(uint8_t fontNum)
     case FONT_ID_TERM:     return "Terminus";
     case FONT_ID_TERMBOLD: return "Terminus bold";
     case FONT_ID_PETSCII:          return "PETSCII";
-    case FONT_ID_VIEWDATA:         return "Viewdata";
-    case FONT_ID_VIEWDATA_MOSAIC:  return "Viewdata mosaic";
+    case FONT_ID_VIEWDATA:         return "Teletext";
+    case FONT_ID_VIEWDATA_MOSAIC:  return "Teletext mosaic";
     case FONT_ID_USER1: 
     case FONT_ID_USER2:
     case FONT_ID_USER3:

@@ -381,7 +381,7 @@ static const struct MenuItemStruct __in_flash(".configmenus") bellMenu[] =
 
 
 static const struct MenuItemStruct __in_flash(".configmenus") terminalMenu[] =
-    {{'1', "Type",                     0, NULL, 0, ttype_fn, &settings.Terminal.ttype,      0, 3, 1, 0, {"VT102/Ansi", "VT52", "PETSCII", "Viewdata"}},
+    {{'1', "Type",                     0, NULL, 0, ttype_fn, &settings.Terminal.ttype,      0, 4, 1, 0, {"VT102/Ansi", "VT52", "PETSCII", "Viewdata"}},
      {'2', "Receiving CR  (0x0d)",     0, NULL, 0, NULL, &settings.Terminal.recvCR,     0, 3, 1, 1, {"ignore", "CR", "LF", "CR+LF"}},
      {'3', "Receiving LF  (0x0a)",     0, NULL, 0, NULL, &settings.Terminal.recvLF,     0, 3, 1, 2, {"ignore", "CR", "LF", "CR+LF"}},
      {'4', "Receiving BS  (0x08)",     0, NULL, 0, NULL, &settings.Terminal.recvBS,     0, 2, 1, 1, {"ignore", "backspace", "backspace+space+backspace"}},
@@ -476,8 +476,8 @@ static const struct MenuItemStruct __in_flash(".configmenus") userFontMenu[] =
 
 
 static const struct MenuItemStruct __in_flash(".configmenus") fontMenu[] =
-    {{'1', "Normal font",      0, NULL, 0, NULL, &settings.Screen.font,  1, 11,  1, 3,   {"None", "CGA (8x8)", "EGA (8x14)", "VGA", "Terminus", "Terminus bold", "PETSCII", "Viewdata", "User 1", "User 2", "User 3", "User 4"}},
-     {'2', "Bold font",        0, NULL, 0, NULL, &settings.Screen.bfont, 0, 11,  1, 0,   {"None", "CGA (8x8)", "EGA (8x14)", "VGA", "Terminus", "Terminus bold", "PETSCII", "Viewdata", "User 1", "User 2", "User 3", "User 4"}},
+    {{'1', "Normal font",      0, NULL, 0, NULL, &settings.Screen.font,  1, 11,  1, 3,   {"None", "CGA (8x8)", "EGA (8x14)", "VGA", "Terminus", "Terminus bold", "PETSCII", "Teletext", "User 1", "User 2", "User 3", "User 4"}},
+     {'2', "Bold font",        0, NULL, 0, NULL, &settings.Screen.bfont, 0, 11,  1, 0,   {"None", "CGA (8x8)", "EGA (8x14)", "VGA", "Terminus", "Terminus bold", "PETSCII", "Teletext", "User 1", "User 2", "User 3", "User 4"}},
      {'3', "Edit user font 1", MI_USERFONT1, userFontMenu, NUM_MENU_ITEMS(userFontMenu), user_font_menulabel_fn},
      {'4', "Edit user font 2", MI_USERFONT2, userFontMenu, NUM_MENU_ITEMS(userFontMenu), user_font_menulabel_fn},
      {'5', "Edit user font 3", MI_USERFONT3, userFontMenu, NUM_MENU_ITEMS(userFontMenu), user_font_menulabel_fn},
@@ -1858,7 +1858,7 @@ static int INFLASHFUN color16_fn(const struct MenuItemStruct *item, int callType
     {
       struct MenuItemStruct item2;
       memcpy(&item2, item, sizeof(item2));
-      item2.max = settings.Terminal.ttype==CFG_TTYPE_PETSCII ? 15 : 7;
+      item2.max = (settings.Terminal.ttype==CFG_TTYPE_PETSCII) ? 15 : 7;
       changeItemValue(&item2, row, col);
     }
 

@@ -426,7 +426,9 @@ static INFLASHFUN void vd_move_cursor(int row, int col)
   if (row >= VD_ROWS) row = VD_ROWS - 1;
   vd_col = col;
   vd_row = row;
-  vd_cursor_draw();
+  // Don't draw cursor while more data is incoming; it will be drawn
+  // at the final position once the stream pauses.
+  if (!serial_readable()) vd_cursor_draw();
 }
 
 // ---------------------------------------------------------------------------
@@ -459,7 +461,9 @@ static INFLASHFUN void vd_put_cell(uint8_t raw_char, uint8_t ctrl_code)
     }
   }
 
-  vd_cursor_draw();
+  // Don't draw cursor while more data is incoming; it will be drawn
+  // at the final position once the stream pauses.
+  if (!serial_readable()) vd_cursor_draw();
 }
 
 // ---------------------------------------------------------------------------
@@ -521,7 +525,7 @@ void INFLASHFUN terminal_viewdata_receive_char(char ch)
       vd_cursor_erase();
       vd_clear_screen();
       vd_col = 0; vd_row = 0;
-      vd_cursor_draw();
+      if (!serial_readable()) vd_cursor_draw();
       return;
     case 0x0D: vd_move_cursor(vd_row, 0);           return; // CR   col→0
     case 0x11: vd_cursor_erase(); vd_cursor_on = true; vd_cursor_draw(); return; // DC1 cursor on
@@ -529,8 +533,17 @@ void INFLASHFUN terminal_viewdata_receive_char(char ch)
     case 0x1B: vd_esc = true;  return;                  // ESC
     case 0x1E:                                           // RS   home
       vd_cursor_erase();
+      // Clear the bottom row (input line) to remove residual attribute codes
+      // from previous page content.  The service sends RS before both new page
+      // content and the '*' input prompt — neither sends FF first — so old
+      // in-band attributes (e.g. Alpha-White + New-Background from a coloured
+      // banner) would otherwise persist in vd_ctrl[23] and bleed into the
+      // prompt rendering, turning it yellow-on-white instead of yellow-on-black.
+      memset(vd_buf [VD_ROWS - 1], 0x20, VD_COLS);
+      memset(vd_ctrl[VD_ROWS - 1], 0x00, VD_COLS);
+      vd_render_row(VD_ROWS - 1);
       vd_col = 0; vd_row = 0;
-      vd_cursor_draw();
+      if (!serial_readable()) vd_cursor_draw();
       return;
     default: break;
   }

@@ -122,7 +122,7 @@ static uint8_t vd_ctrl[VD_ROWS][VD_COLS];
 // ---------------------------------------------------------------------------
 static int  vd_col, vd_row;
 static bool vd_cursor_on;
-static bool vd_esc;    // true: next incoming byte is a C1 control code
+static bool vd_esc;      // true: next incoming byte is a C1 control code
 
 // ---------------------------------------------------------------------------
 // Row-level attribute state (rebuilt by vd_render_row scanning from col 0)
@@ -204,8 +204,8 @@ static INFLASHFUN bool vd_render_row_to(int src, int dst)
       bool    hold_before    = s.hold_graphics;
 
       switch (ctrl) {
-        case 0x41: case 0x42: case 0x43: case 0x44:
-        case 0x45: case 0x46: case 0x47:              // Alpha colours (SET AFTER)
+        case 0x40: case 0x41: case 0x42: case 0x43: case 0x44:
+        case 0x45: case 0x46: case 0x47:              // Alpha colours incl. Black (SET AFTER)
           s.fg              = vd_colour_table[ctrl - 0x40u];
           s.graphics        = false;
           s.conceal         = false;
@@ -399,15 +399,23 @@ static INFLASHFUN void vd_scroll_up(void)
 }
 
 // ---------------------------------------------------------------------------
-// Move cursor (clamped to screen; scrolls if past bottom)
+// Move cursor with wrapping at column edges and row 0/23 boundary.
+//
+// Column wrap:  BS past col 0  → col 39, row-1  (BS wraps to end of prev row)
+//               HT past col 39 → col 0,  row+1  (HT wraps to start of next row)
+// Row wrap:     VT past row 0  → row 23          (wraps to last row)
+//               LF past row 23 → row 23 (clamp)  (no scroll on cursor movement;
+//                                                  only vd_put_cell scrolls)
 // ---------------------------------------------------------------------------
 static INFLASHFUN void vd_move_cursor(int row, int col)
 {
   vd_cursor_erase();
-  if (col < 0)        col = 0;
-  if (col >= VD_COLS) col = VD_COLS - 1;
-  if (row < 0)        row = 0;
-  while (row >= VD_ROWS) { vd_scroll_up(); row--; }
+  // Column edge wrapping adjusts the row before row bounds are checked
+  if (col < 0)        { col = VD_COLS - 1; row--; }
+  if (col >= VD_COLS) { col = 0;           row++; }
+  // Row bounds: wrap upward, clamp downward
+  if (row < 0)        row = VD_ROWS - 1;
+  if (row >= VD_ROWS) row = VD_ROWS - 1;
   vd_col = col;
   vd_row = row;
   vd_cursor_draw();
@@ -451,9 +459,9 @@ static INFLASHFUN void vd_put_cell(uint8_t raw_char, uint8_t ctrl_code)
 // ---------------------------------------------------------------------------
 void INFLASHFUN terminal_viewdata_init(void)
 {
-  vd_cursor_on       = true;
-  vd_esc             = false;
-  cursor_col_saved   = -1;
+  vd_cursor_on     = true;
+  vd_esc           = false;
+  cursor_col_saved = -1;
   cursor_row_saved   = -1;
   vd_col             = 0;
   vd_row             = 0;
@@ -507,11 +515,7 @@ void INFLASHFUN terminal_viewdata_receive_char(char ch)
       vd_col = 0; vd_row = 0;
       vd_cursor_draw();
       return;
-    case 0x0D:                                            // CR
-      vd_cursor_erase();
-      vd_col = 0;
-      vd_cursor_draw();
-      return;
+    case 0x0D: vd_move_cursor(vd_row, 0);           return; // CR   col→0
     case 0x11: vd_cursor_on = true;  vd_cursor_draw(); return; // DC1 cursor on
     case 0x14: vd_cursor_erase(); vd_cursor_on = false; return; // DC4 cursor off
     case 0x1B: vd_esc = true;  return;                  // ESC

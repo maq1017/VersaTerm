@@ -51,6 +51,7 @@
 //
 // C1 control codes (byte sent after ESC, range 0x40-0x5F)
 // --------------------------------------------------------
+//   0x40  Alpha Black            0x50  Mosaic Black
 //   0x41  Alpha Red              0x51  Mosaic Red
 //   0x42  Alpha Green            0x52  Mosaic Green
 //   0x43  Alpha Yellow           0x53  Mosaic Yellow
@@ -87,18 +88,21 @@
 #define VD_ROWS  24
 
 // ---------------------------------------------------------------------------
-// Viewdata 8-colour values — ANSI 4-bit colour indices (0-7) so that
-// framebuf_set_color() maps them correctly through the ANSI colour palette.
-// Standard ANSI: 0=black 1=red 2=green 3=yellow 4=blue 5=magenta 6=cyan 7=white
+// Viewdata 8-colour values — ANSI 4-bit colour indices mapped to the
+// "bright" (high-intensity) ANSI palette entries (8-15) so that
+// framebuf_set_color() produces full-brightness primaries matching the
+// original SAA5050 chip output.  Black stays at index 0 (pure black).
+// Bright ANSI DVI defaults: 9=0b110000 10=0b001100 11=0b111100
+//                            12=0b000011 13=0b110011 14=0b001111 15=0b111111
 // ---------------------------------------------------------------------------
 #define VD_BLACK    0u
-#define VD_RED      1u
-#define VD_GREEN    2u
-#define VD_YELLOW   3u
-#define VD_BLUE     4u
-#define VD_MAGENTA  5u
-#define VD_CYAN     6u
-#define VD_WHITE    7u
+#define VD_RED      9u
+#define VD_GREEN    10u
+#define VD_YELLOW   11u
+#define VD_BLUE     12u
+#define VD_MAGENTA  13u
+#define VD_CYAN     14u
+#define VD_WHITE    15u
 
 // Colour-index table: C1 code offset (1-7) -> framebuf colour
 // Alpha: code 0x41-0x47 -> index = code - 0x40 = 1-7
@@ -219,8 +223,8 @@ static INFLASHFUN bool vd_render_row_to(int src, int dst)
           s.held_slot_valid = false;
           break;
 
-        case 0x51: case 0x52: case 0x53: case 0x54:
-        case 0x55: case 0x56: case 0x57:              // Mosaic colours (SET AFTER)
+        case 0x50: case 0x51: case 0x52: case 0x53: case 0x54:
+        case 0x55: case 0x56: case 0x57:              // Mosaic colours incl. Black (SET AFTER)
           s.fg       = vd_colour_table[ctrl - 0x50u];
           s.graphics = true;
           s.conceal  = false;
@@ -520,7 +524,7 @@ void INFLASHFUN terminal_viewdata_receive_char(char ch)
       vd_cursor_draw();
       return;
     case 0x0D: vd_move_cursor(vd_row, 0);           return; // CR   col→0
-    case 0x11: vd_cursor_on = true;  vd_cursor_draw(); return; // DC1 cursor on
+    case 0x11: vd_cursor_erase(); vd_cursor_on = true; vd_cursor_draw(); return; // DC1 cursor on
     case 0x14: vd_cursor_erase(); vd_cursor_on = false; return; // DC4 cursor off
     case 0x1B: vd_esc = true;  return;                  // ESC
     case 0x1E:                                           // RS   home

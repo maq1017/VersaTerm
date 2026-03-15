@@ -1998,7 +1998,7 @@ static int INFLASHFUN answerback_fn(const struct MenuItemStruct *item, int callT
       print("\033[?25l\033[%i;%iH%s\033[%i;%iH", row, col, settings.Terminal.answerback, row, col);
     }
   else if( callType==IFT_DEFAULT )
-    strcpy(settings.Terminal.answerback, "VersaTerm 1.0");
+    strcpy(settings.Terminal.answerback, "VersaTerm 1.1");
   
   return res;
 }
@@ -2252,7 +2252,7 @@ void INFLASHFUN config_show_splash()
 {
   static const char __in_flash(".configmenus") splash[9][80] =
     {"\016lqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk\n",
-     "x\017                     VersaTerm 1.0                     \016x", 
+     "x\017                     VersaTerm 1.1                     \016x", 
      "x\017                 (C) 2022 David Hansel                 \016x",
      "x\017          https://github.com/dhansel/VersaTerm         \016x",
      "tqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqu",

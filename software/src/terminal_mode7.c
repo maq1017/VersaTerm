@@ -423,7 +423,14 @@ void INFLASHFUN terminal_mode7_receive_char(char ch)
     case 0x00: return;                                          // NUL  ignore
     case 0x08: vd_move_cursor(vd_row,   vd_col-1); return;    // BS   left
     case 0x09: vd_move_cursor(vd_row,   vd_col+1); return;    // HT   right
-    case 0x0A: vd_move_cursor(vd_row+1, vd_col);   return;    // LF   down
+    case 0x0A:                                                  // LF   down (scroll at bottom)
+      if (vd_row + 1 >= VD_ROWS) {
+        vd_cursor_erase();
+        vd_scroll_up();
+      } else {
+        vd_move_cursor(vd_row + 1, vd_col);
+      }
+      return;
     case 0x0B: vd_move_cursor(vd_row-1, vd_col);   return;    // VT   up
     case 0x0C:                                                  // FF   clear+home
       vd_cursor_erase(); vd_clear_screen();

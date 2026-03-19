@@ -426,9 +426,6 @@ static INFLASHFUN void vd_move_cursor(int row, int col)
   if (row >= VD_ROWS) row = VD_ROWS - 1;
   vd_col = col;
   vd_row = row;
-  // Don't draw cursor while more data is incoming; it will be drawn
-  // at the final position once the stream pauses.
-  if (!serial_readable()) vd_cursor_draw();
 }
 
 // ---------------------------------------------------------------------------
@@ -525,7 +522,6 @@ void INFLASHFUN terminal_viewdata_receive_char(char ch)
       vd_cursor_erase();
       vd_clear_screen();
       vd_col = 0; vd_row = 0;
-      if (!serial_readable()) vd_cursor_draw();
       return;
     case 0x0D: vd_move_cursor(vd_row, 0);           return; // CR   col→0
     case 0x11: vd_cursor_erase(); vd_cursor_on = true; vd_cursor_draw(); return; // DC1 cursor on
@@ -543,7 +539,6 @@ void INFLASHFUN terminal_viewdata_receive_char(char ch)
       memset(vd_ctrl[VD_ROWS - 1], 0x00, VD_COLS);
       vd_render_row(VD_ROWS - 1);
       vd_col = 0; vd_row = 0;
-      if (!serial_readable()) vd_cursor_draw();
       return;
     default: break;
   }

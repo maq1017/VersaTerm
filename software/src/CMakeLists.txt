@@ -6,6 +6,7 @@ add_executable(VersaTerm
         font.c
         terminal.c
         terminal_viewdata.c
+        terminal_mode7.c
         keyboard.c
         keyboard_usb.c
         keyboard_ps2.c

@@ -381,7 +381,7 @@ static const struct MenuItemStruct __in_flash(".configmenus") bellMenu[] =
 
 
 static const struct MenuItemStruct __in_flash(".configmenus") terminalMenu[] =
-    {{'1', "Type",                     0, NULL, 0, ttype_fn, &settings.Terminal.ttype,      0, 4, 1, 0, {"VT102/Ansi", "VT52", "PETSCII", "Viewdata"}},
+    {{'1', "Type",                     0, NULL, 0, ttype_fn, &settings.Terminal.ttype,      0, 4, 1, 0, {"VT102/Ansi", "VT52", "PETSCII", "Viewdata", "BBC Mode 7"}},
      {'2', "Receiving CR  (0x0d)",     0, NULL, 0, NULL, &settings.Terminal.recvCR,     0, 3, 1, 1, {"ignore", "CR", "LF", "CR+LF"}},
      {'3', "Receiving LF  (0x0a)",     0, NULL, 0, NULL, &settings.Terminal.recvLF,     0, 3, 1, 2, {"ignore", "CR", "LF", "CR+LF"}},
      {'4', "Receiving BS  (0x08)",     0, NULL, 0, NULL, &settings.Terminal.recvBS,     0, 2, 1, 1, {"ignore", "backspace", "backspace+space+backspace"}},
@@ -1818,7 +1818,8 @@ static int INFLASHFUN ttype_fn(const struct MenuItemStruct *item, int callType, 
       int v = *(item->value);
       changeItemValue(item, row, col);
       if( settings.Terminal.ttype!=CFG_TTYPE_PETSCII &&
-          settings.Terminal.ttype!=CFG_TTYPE_VIEWDATA )
+          settings.Terminal.ttype!=CFG_TTYPE_VIEWDATA &&
+          settings.Terminal.ttype!=CFG_TTYPE_MODE7 )
         { settings.Terminal.bgcolor &= 7; settings.Terminal.fgcolor &= 7; }
       res = *(item->value) != v;
     }

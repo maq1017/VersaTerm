@@ -35,6 +35,7 @@
 #define CFG_TTYPE_VT52     1
 #define CFG_TTYPE_PETSCII  2
 #define CFG_TTYPE_VIEWDATA 3
+#define CFG_TTYPE_MODE7    4
 
 uint32_t config_get_serial_baud();
 uint8_t  config_get_serial_bits();

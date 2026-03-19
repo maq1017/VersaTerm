@@ -21,6 +21,7 @@
 #include "font.h"
 #include "terminal.h"
 #include "terminal_viewdata.h"
+#include "terminal_mode7.h"
 #include "config.h"
 #include "pins.h"
 #include "serial.h"
@@ -1262,6 +1263,10 @@ void INFLASHFUN terminal_receive_char(char c)
     case CFG_TTYPE_VIEWDATA:
       terminal_viewdata_receive_char(c);
       break;
+
+    case CFG_TTYPE_MODE7:
+      terminal_mode7_receive_char(c);
+      break;
     }
 }
 
@@ -1461,6 +1466,8 @@ void INFLASHFUN terminal_process_key(uint16_t key)
     terminal_process_key_petscii(key);
   else if( config_get_terminal_type()==CFG_TTYPE_VIEWDATA )
     terminal_viewdata_process_key(key);
+  else if( config_get_terminal_type()==CFG_TTYPE_MODE7 )
+    terminal_mode7_process_key(key);
   else
     terminal_process_key_vt(key);
 }
@@ -1477,6 +1484,8 @@ void INFLASHFUN terminal_apply_settings()
 {
   if( config_get_terminal_type()==CFG_TTYPE_VIEWDATA )
     terminal_viewdata_apply_settings();
+  else if( config_get_terminal_type()==CFG_TTYPE_MODE7 )
+    terminal_mode7_apply_settings();
   else
     terminal_init();
 }

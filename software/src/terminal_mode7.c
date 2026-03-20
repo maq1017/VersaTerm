@@ -391,6 +391,12 @@ void INFLASHFUN terminal_mode7_apply_settings(void)
   font_apply_font(FONT_ID_VIEWDATA,        false);
   font_apply_font(FONT_ID_VIEWDATA_MOSAIC, true);
 
+  // The viewdata font is 20px tall, which fits only 24 rows in 480px.
+  // Mode 7 needs 25 rows, so we reduce the rendered char height to 19px
+  // (480/19 = 25).  Row 19 of each character is the blank separator line
+  // and is not drawn, so the visual change is imperceptible.
+  font_set_char_height(19);
+
   framebuf_set_screen_size(80, VD_ROWS);
 
   terminal_mode7_init();

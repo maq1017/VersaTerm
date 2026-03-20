@@ -129,6 +129,12 @@ uint8_t font_get_char_height()
 }
 
 
+void font_set_char_height(uint8_t h)
+{
+  font_char_height = h;
+}
+
+
 const uint8_t *font_get_bmpdata(uint8_t fontNum)
 {
   switch( fontNum )

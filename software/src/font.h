@@ -41,6 +41,7 @@ const uint8_t *font_get_data_blinkon();
 const uint8_t *font_get_data_blinkoff();
 
 uint8_t        font_get_char_height();
+void           font_set_char_height(uint8_t h);
 bool           font_get_font_info(uint8_t fontNum, uint32_t *bitmapWidth, uint32_t *bitmapHeight, uint8_t *charHeight, uint8_t *underlineRow);
 const char    *font_get_name(uint8_t fontNum);
 const uint8_t *font_get_bmpdata(uint8_t fontNum);

@@ -393,18 +393,6 @@ static INFLASHFUN void vd_clear_screen(void)
     framebuf_set_row_attr(r, 0);
 }
 
-// ---------------------------------------------------------------------------
-// Scroll up one row
-// ---------------------------------------------------------------------------
-static INFLASHFUN void vd_scroll_up(void)
-{
-  memmove(vd_buf[0],  vd_buf[1],  (VD_ROWS - 1) * VD_COLS);
-  memmove(vd_ctrl[0], vd_ctrl[1], (VD_ROWS - 1) * VD_COLS);
-  memset(vd_buf [VD_ROWS - 1], 0x20, VD_COLS);
-  memset(vd_ctrl[VD_ROWS - 1], 0x00, VD_COLS);
-  framebuf_scroll_screen(1, VD_WHITE, VD_BLACK);
-  vd_render_all();
-}
 
 // ---------------------------------------------------------------------------
 // Move cursor with wrapping at column edges and row 0/23 boundary.
@@ -451,14 +439,17 @@ static INFLASHFUN void vd_put_cell(uint8_t raw_char, uint8_t ctrl_code)
   }
 
   // Advance cursor
+  // Viewdata is page-based (RS + LFs address every row); scrolling never occurs
+  // in normal operation.  When a fully-packed 40-column row is written, the
+  // cursor wraps past the last column.  If that row happens to be row 23, the
+  // old scroll would fire *before* the server's trailing BS could undo the
+  // wrap, pushing the header row off the top.  Clamp instead.
   vd_col++;
   if (vd_col >= VD_COLS) {
     vd_col = 0;
     vd_row++;
-    if (vd_row >= VD_ROWS) {
-      vd_scroll_up();
+    if (vd_row >= VD_ROWS)
       vd_row = VD_ROWS - 1;
-    }
   }
 
   // Don't draw cursor while more data is incoming; it will be drawn
@@ -533,15 +524,11 @@ void INFLASHFUN terminal_viewdata_receive_char(char ch)
     case 0x1B: vd_esc = true;  return;                  // ESC
     case 0x1E:                                           // RS   home
       vd_cursor_erase();
-      // Clear the bottom row (input line) to remove residual attribute codes
-      // from previous page content.  The service sends RS before both new page
-      // content and the '*' input prompt — neither sends FF first — so old
-      // in-band attributes (e.g. Alpha-White + New-Background from a coloured
-      // banner) would otherwise persist in vd_ctrl[23] and bleed into the
-      // prompt rendering, turning it yellow-on-white instead of yellow-on-black.
-      memset(vd_buf [VD_ROWS - 1], 0x20, VD_COLS);
-      memset(vd_ctrl[VD_ROWS - 1], 0x00, VD_COLS);
-      vd_render_row(VD_ROWS - 1);
+      // RS is used both mid-page (row addressing: 1e + N×LF → row N) and at
+      // end-of-page (input prompt positioning).  New pages always begin with FF
+      // (0x0C) which calls vd_clear_screen(), so attribute cleanup is already
+      // handled there.  Clearing row 23 here caused the last row of a full page
+      // to be blanked by the end-of-page RS.
       vd_col = 0; vd_row = 0;
       if (!serial_readable()) vd_cursor_draw();
       return;

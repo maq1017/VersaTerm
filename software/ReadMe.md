@@ -17,22 +17,47 @@ Uploading firmware to the Raspberry Pi Pico is easy:
 
 ```
 git clone https://github.com/dhansel/VersaTerm.git
-cd VersaTerm/software/lib
-git submodule update --init
-cd pico-sdk/lib
-git submodule update --init
-cd tinyusb
-git checkout 86ad6e5
-cd ../../../..
-mkdir build
-cd build
+cd VersaTerm
+software/tools/setup-submodules.sh
+mkdir software/build
+cd software/build
 cmake .. -DPICO_SDK_PATH=../lib/pico-sdk -DPICO_COPY_TO_RAM=1
 make
 ```
 
-The `git checkout 86ad6e5` command updates TinyUSB to version 0.18 instead of version 0.12
-which was included with the pico-sdk version used by VersaTerm. Version 0.12 has issues
-with (some) USB hubs which are resolved in 0.18.
+`setup-submodules.sh` runs `git submodule update --init --recursive` and then reapplies
+two local overrides that a plain submodule update strips out again (see comments in the
+script for details):
+
+- Bumps `lib/pico-sdk/lib/tinyusb` to TinyUSB 0.18.0 (commit `86ad6e5`) instead of the
+  0.12.0 that ships with the pinned pico-sdk version. 0.12.0 has USB keyboard
+  enumeration issues through (some) USB hubs, resolved in 0.18.0. This can't be recorded
+  as a normal submodule pin because it's nested two levels deep
+  (VersaTerm -> pico-sdk -> tinyusb), so it has to be reapplied by hand/script after
+  every submodule sync. **If a keyboard stops responding (e.g. hangs on the startup
+  screen with no key input) after resyncing submodules, this is almost certainly why —
+  rerun the setup script and rebuild.**
+- Patches `lib/pico-sdk/tools/FindPioasm.cmake` to add
+  `-DCMAKE_POLICY_VERSION_MINIMUM=3.5` to the pioasm sub-builds. Needed with CMake 4.x,
+  which refuses to configure the vendored pioasm sources (their `CMakeLists.txt`
+  requires CMake < 3.5, support for which CMake 4 dropped entirely). Harmless with
+  older CMake.
+
+After running the script, `git status` will show `software/lib/pico-sdk` as having
+"modified content" — that's expected and reflects the tinyusb override above, not
+something to discard/reset.
+
+### If your ARM toolchain can't find `nosys.specs`
+
+If you have more than one `arm-none-eabi-gcc` installed (e.g. both a Homebrew build and
+the official [Arm GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)),
+the one earlier in your `PATH` may be missing `nosys.specs`/newlib support even though
+another installed copy has it. Rather than changing your `PATH`, point CMake at the
+working toolchain explicitly:
+
+```
+cmake .. -DPICO_SDK_PATH=../lib/pico-sdk -DPICO_COPY_TO_RAM=1 -DPICO_TOOLCHAIN_PATH=/path/to/working/arm-none-eabi/bin
+```
 
 This should create file VersaTerm/software/build/src/VersaTerm.uf2<br>
 Follow the "Uploading firmware to Raspberry Pi Pico" instructions above to upload the .uf2 file to the Pico.

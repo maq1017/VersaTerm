@@ -566,15 +566,16 @@ void INFLASHFUN terminal_viewdata_process_key(uint16_t key)
     case KEY_RIGHT:     serial_send_char(0x09); return;
     case KEY_HOME:      serial_send_char(0x1E); return;
 
-    // Enter sends '#', the Prestel "send" key (originates from the 0-9/*/# telephone
-    // keypad Prestel was built on; modern viewdata services expect '#', not CR).
-    // Ctrl+M is kept as an escape hatch for a literal CR, e.g. for driving a modem
-    // with AT commands.
+    // Enter sends 0x5F, Prestel's "send" control byte (labelled '#' on the
+    // 0-9/*/# telephone keypad Prestel was built on, but the byte actually put
+    // on the wire is underscore, not ASCII '#' 0x23 — confirmed against period
+    // keyboard-adapter firmware). Ctrl+M is kept as an escape hatch for a
+    // literal CR, e.g. for driving a modem with AT commands.
     case KEY_ENTER:
       if( keyboard_ctrl_pressed(key) && (key & 0xFF) == HID_KEY_M )
         serial_send_char(0x0D);
       else
-        serial_send_char(0x23);
+        serial_send_char(0x5F);
       return;
 
     // Backspace/Delete send cursor-left
